@@ -1,2 +1,25 @@
 # asv-news
-Public news feed for ASV Settings hub. news.json is written by the ASV Omnissiah bot.
+
+Публичная лента новостей для хаба [ASV Settings](https://github.com/ASV-project).
+
+Файл `news.json` **пишет бот ASV Omnissiah**: он читает выделенный канал новостей в Discord и при изменении обновляет этот файл. Править `news.json` руками не нужно.
+
+Хаб читает файл по raw-URL, без токенов.
+
+Формат (`schema`: 1):
+
+```json
+{
+  "schema": 1,
+  "updated_at": "2026-11-16T02:09:00+07:00",
+  "items": [
+    {
+      "id": "id сообщения Discord",
+      "published_at": "2026-11-16T02:00:00+07:00",
+      "title": "Первая строка сообщения",
+      "body": "Остальной текст",
+      "author": "отображаемое имя"
+    }
+  ]
+}
+```
